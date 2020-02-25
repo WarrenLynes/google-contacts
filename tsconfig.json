@@ -15,7 +15,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@contacts/material": ["libs/material/src/index.ts"],
+      "@contacts/ui": ["libs/ui/src/index.ts"],
+      "@contacts/core-state": ["libs/core-state/src/index.ts"],
+      "@contacts/core-data": ["libs/core-data/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

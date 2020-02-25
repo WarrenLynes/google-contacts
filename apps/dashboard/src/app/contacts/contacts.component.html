@@ -1,0 +1,23 @@
+
+
+
+<div class="container">
+  <button mat-button (click)="onCreateContact()">create</button>
+  <div class="col- full-width">
+    <mat-card>
+      <mat-card-content>
+        <mat-list >
+          <mat-list-item *ngFor="let contact of contacts$ | async">
+            {{contact.names[0].givenName}}
+            {{contact.names[0].familyName}}
+            <span class="spacer" style="flex-grow: 1"></span>
+            <button mat-icon-button (click)="editContact(contact.id)"><mat-icon>more_vert</mat-icon></button>
+            <button mat-icon-button (click)="deleteContact(contact.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

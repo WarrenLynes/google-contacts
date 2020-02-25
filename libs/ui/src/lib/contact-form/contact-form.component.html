@@ -1,0 +1,21 @@
+
+
+<mat-card>
+
+  <mat-card-content *ngIf="!!form">
+    <form class="form-container" (ngSubmit)="onSubmit()" [formGroup]="form">
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="last name" formControlName="familyName" type="familyName" name="familyName">
+        <mat-error *ngIf="form.controls['familyName'].hasError('required')">LastName is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="first name" formControlName="givenName" type="givenName" name="givenName">
+        <mat-error *ngIf="form.controls['givenName'].hasError('required')">first name is required</mat-error>
+      </mat-form-field>
+
+      <button type="submit" mat-button> create </button>
+    </form>
+  </mat-card-content>
+</mat-card>
